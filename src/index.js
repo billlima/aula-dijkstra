@@ -106,7 +106,7 @@ function preencherRotulo(no, noAnterior = null) {
     if (noAnterior && no.getNome() != noAnterior.getNome()) {
         // print(`Vértice ${no.getNome()}: preenchendo ou atualizando rótulo e ordenando crescente`);
         let distanciaNoAnterior = noAnterior.getRotulos()[0][0];
-        let distanciaNoAnteriorAteNo = noAnterior.getDistanciaAte(no.getNome());
+        let distanciaNoAnteriorAteNo = parseInt(noAnterior.getDistanciaAte(no.getNome()));
         no.addRotulo(distanciaNoAnterior + distanciaNoAnteriorAteNo, noAnterior.getNome());
     }
     return no;
